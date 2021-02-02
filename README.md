@@ -28,7 +28,7 @@ change the look of the `Greenhouse` component.
 
 #### Take a look at the code in the `src/index.js`
 
-- The Provider created for the `ThemeContext`wraps the entire application inside of the `Root` component.
+- The Provider created for the `ThemeContext` wraps the entire application inside of the `Root` component.
 - This gives all nested components the ability to gain access to the ThemeContext's value.
 
 #### Take a look at the code in `src/components/Greenhouse/Greenhouse.js`. Your job is to use the value of `ThemeContext` in the `Greenhouse` component.
@@ -41,7 +41,7 @@ change the look of the `Greenhouse` component.
 
 #### Let's test in the browser.
 
-Inside our `ThemeProvider` we can manually change the default state. If the default for `themeName` is set to `'day'`, the `dayImage` should be dipslayed. If the default is set to `'night'`, `nightImage` should be displayed.
+Inside our `ThemeProvider` we can manually change the default state. If the default for `themeName` is set to `'day'`, the `dayImage` should be displayed. If the default is set to `'night'`, `nightImage` should be displayed.
 
 Congratulations, you just connected a component to a context!
 
@@ -56,7 +56,7 @@ is clicked, the `themeName` should be set to `"day"`. When the `div` with the
 class of "off" is clicked, the `themeName` should be set to `"night"`.
 
 The `themeName` value should also replace the hard coded `"day"` class on the `div` with
-the class of "light-switch" plus the appropriate theme name based on state. Ex: `` <div className={ `light-switch ${themeName}`}> ``.
+the class of "light-switch" plus the appropriate theme name based on state. Ex: `` <div className={`light-switch ${themeName}`}> ``.
 
 _Hint:_
 
@@ -112,7 +112,8 @@ In this phase, you will add more properties on the `ClimateContext` value, and u
 (`src/components/Hygrometer/Hygrometer.js`)
 
 - Create a new component state variable in the `ClimateContext` Provider that
-  reads and sets the humidity of the greenhouse.
+  reads and sets the humidity of the greenhouse. Set the default humidity to 
+  `40` (Number).
 
 - The `Hygrometer` component should show and change the humidity value in the
   `ClimateContext`.
@@ -121,7 +122,7 @@ In this phase, you will add more properties on the `ClimateContext` value, and u
 
 Test this out on the browser!
 
-## Phase 5: Climate Stats
+## Phase 6: Climate Stats
 
 - Connect the `ClimateStats` component
   (`src/components/Greenhouse/ClimateStats.js`) to the `ClimateContext`.
