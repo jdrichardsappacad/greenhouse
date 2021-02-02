@@ -1,6 +1,5 @@
 import ReactSlider from 'react-slider';
 import './Thermometer.css';
-import { useEffect, useState } from 'react';
 import { useClimate } from '../../context/ClimateContext';
 
 function Thermometer() {
