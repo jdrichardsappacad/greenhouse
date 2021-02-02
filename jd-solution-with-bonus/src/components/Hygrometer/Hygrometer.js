@@ -1,5 +1,4 @@
 import ReactSlider from 'react-slider';
-import { useState, useEffect } from 'react';
 import { useClimate } from '../../context/ClimateContext';
 import './Hygrometer.css';
 
