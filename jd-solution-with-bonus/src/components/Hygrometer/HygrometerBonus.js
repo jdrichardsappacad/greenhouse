@@ -8,9 +8,6 @@ function Hygrometer() {
   const [goal, setGoal] = useState(humidity);
 
   useEffect(() => {
-    if (humidity === goal) {
-      return;
-    }
     const changeTemp = setInterval(() => {
       if (humidity < goal) {
         setGoal((prevGoal) =>

@@ -1,21 +1,22 @@
-import { Switch, Route } from "react-router-dom";
-import Greenhouse from "./components/Greenhouse";
-import Thermometer from "./components/Thermometer";
-import Hygrometer from "./components/Hygrometer";
-import Navigation from "./components/Navigation";
+import { Switch, Route } from 'react-router-dom';
+import Greenhouse from './components/Greenhouse';
+import Thermometer from './components/Thermometer';
+import ThermometerBonus from './components/Thermometer/ThermometerBonus';
+import Hygrometer from './components/Hygrometer';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <>
       <Navigation />
       <Switch>
-        <Route path="/thermometer">
-          <Thermometer />
+        <Route path='/thermometer'>
+          <ThermometerBonus />
         </Route>
-        <Route path="/hygrometer">
+        <Route path='/hygrometer'>
           <Hygrometer />
         </Route>
-        <Route path="/">
+        <Route path='/'>
           <Greenhouse />
         </Route>
       </Switch>

@@ -3,14 +3,11 @@ import './Thermometer.css';
 import { useEffect, useState } from 'react';
 import { useClimate } from '../../context/ClimateContext';
 
-function Thermometer() {
+function ThermometerBonus() {
   const { temperature, setTemperature } = useClimate();
   const [goal, setGoal] = useState(temperature);
 
   useEffect(() => {
-    if (temperature === goal) {
-      return;
-    }
     const changeTemp = setInterval(() => {
       if (temperature < goal) {
         setGoal((prevGoal) => prevGoal - 1);
@@ -53,4 +50,4 @@ function Thermometer() {
   );
 }
 
-export default Thermometer;
+export default ThermometerBonus;
